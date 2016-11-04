@@ -1,0 +1,35 @@
+{
+  "name": "workout-graphic",
+  "version": "1.0.0",
+  "description": "Interactive graphics to generate specific training plans",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmocana2/workout-graphic.git"
+  },
+  "keywords": [
+    "graphic",
+    "workout",
+    "canvas"
+  ],
+  "author": "jmocana",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jmocana2/workout-graphic/issues"
+  },
+  "homepage": "https://github.com/jmocana2/workout-graphic#readme",
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7"
+  },
+  "devDependencies": {
+    "babelify": "^7.3.0",
+    "browserify": "^13.1.1",
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}
