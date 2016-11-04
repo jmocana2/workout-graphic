@@ -1,6 +1,6 @@
 {
   "name": "workout-graphic",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Interactive graphics to generate specific training plans",
   "main": "index.js",
   "scripts": {
