@@ -4,7 +4,8 @@
   "description": "Interactive graphics to generate specific training plans",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "gulp",
+    "start": "gulp watch"
   },
   "repository": {
     "type": "git",
@@ -22,7 +23,9 @@
   },
   "homepage": "https://github.com/jmocana2/workout-graphic#readme",
   "dependencies": {
-    "bootstrap-sass": "^3.3.7"
+    "bootstrap-sass": "^3.3.7",
+    "chart.js": "^2.3.0",
+    "jquery": "^3.1.1"
   },
   "devDependencies": {
     "babelify": "^7.3.0",
@@ -30,11 +33,9 @@
     "gulp": "^3.9.1",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^2.0.0",
+    "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.7.0"
-  },
-  "scripts": {
-    "build": "gulp",
-    "start": "gulp watch"
   }
 }

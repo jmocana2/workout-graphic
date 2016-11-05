@@ -4,7 +4,9 @@ var rename = require('gulp-rename');
 var babel = require('babelify');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
+var buffer = require('vinyl-buffer');
 var watchify = require('watchify');
+var uglify = require('gulp-uglify');
 
 gulp.task('styles', function() {
 	gulp
@@ -27,7 +29,9 @@ function compile(watch) {
 			.transform(babel)
 			.bundle()
 			.pipe(source('index.js'))
-			.pipe(rename('app.js'))
+			.pipe(buffer())
+			.pipe(uglify())
+			.pipe(rename('bundle.js'))
 			.pipe(gulp.dest('dist/js'));
 	}
 
