@@ -1,1 +1,3 @@
-console.log('Hola munda');
+var $ = require('jquery');
+
+$('#workout-graphic').css('height','500px');
