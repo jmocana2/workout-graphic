@@ -46,8 +46,7 @@ function compile(watch) {
 }
 
 gulp.task('scripts', function() {
-	browserify('./src/index.js')
-		
+	browserify('./src/index.js')		
 })
 
 gulp.task('build', function() {
