@@ -1,3 +1,9 @@
 var $ = require('jquery');
+var Chart = require('chart.js');
 
-$('#workout-graphic').css('height','500px');
+var ctx = document.getElementById("myChart");
+console.log('ss!!');
+
+
+
+
