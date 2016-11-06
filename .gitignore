@@ -3,4 +3,5 @@ node_modules/
 Prepros Build/
 *.cfg
 *.sublime-workspace
+*.sublime-project
 typings/
