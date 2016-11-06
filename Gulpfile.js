@@ -86,7 +86,7 @@ gulp.task('server', function() {
 });
 
 //build
-gulp.task('build', function() {'html', 'styles', 'assets', 'scripts'});
+gulp.task('build', ['html', 'styles', 'assets', 'scripts']);
 
 //watch
 gulp.task('watch', function() {
