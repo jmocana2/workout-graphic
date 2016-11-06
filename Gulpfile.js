@@ -11,11 +11,13 @@ var uglify = require('gulp-uglify');
 var browserSync = require('browser-sync');
 var express = require('express');
 var path = require('path'); 
+var ts = require('gulp-typescript');
 
 //source paths
 var source_paths = {  
   path_sass: './src/scss/**/*.scss',
   path_js: './src/js/**/*.js',
+  path_ts: './src/ts/**/*.ts',
   path_html: './src/html/**/*.html',
   path_assets: './asets/**/*'
 }
@@ -66,6 +68,18 @@ gulp.task('scripts', function() {
 	console.log("js+");	
 });
 
+//typescript
+gulp.task('ts', function () {
+    return gulp.src(source_paths.path_ts)
+        .pipe(ts({
+            noImplicitAny: true,
+            out: 'bundle.js'
+        }))
+        .pipe(gulp.dest('dist/js'));
+
+    console.log("ts+");    
+});
+
 //server (express)
 gulp.task('server', function() {
 	var app = express();
@@ -86,15 +100,16 @@ gulp.task('server', function() {
 });
 
 //build
-gulp.task('build', function() {'html', 'styles', 'assets', 'scripts'});
+gulp.task('build', ['html', 'styles', 'assets', 'ts']);
 
 //watch
 gulp.task('watch', function() {
 	gulp.watch(source_paths.path_sass, ['styles', browserSync.reload]);
 	gulp.watch(source_paths.path_html, ['html', browserSync.reload]);
 	gulp.watch(source_paths.path_js, ['scripts', browserSync.reload]);
+	gulp.watch(source_paths.path_ts, ['ts', browserSync.reload]);
 	gulp.watch(source_paths.path_assets, ['assets', browserSync.reload]);
 });
 
 //default
-gulp.task('default', ['server','html', 'styles', 'assets', 'scripts', 'watch']);
+gulp.task('default', ['server','html', 'styles', 'assets', 'ts', 'watch']);
