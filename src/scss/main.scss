@@ -1,7 +1,7 @@
-$main-color : #FFF;
+$main-color : #EAEAEA;
 
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap.scss";
 
-.workout-graphic {
+.container {
 	background-color: $main-color;
 }
