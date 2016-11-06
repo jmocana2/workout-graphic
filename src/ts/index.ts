@@ -1,4 +1,4 @@
-function holaMundo(nombre) {
+function holaMundo(nombre:string) {
 	return "Hola mundo soy: " + nombre; 
 }
 
